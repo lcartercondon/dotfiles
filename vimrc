@@ -1,6 +1,36 @@
+set nocompatible		"ViMproved
+filetype off 			"required for vundle
+set shell=bash
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+" let vundle manage itself
+Plugin 'gmarik/Vundle.vim'
+
+" fugitive plugin for git"
+Plugin 'tpope/vim-fugitive'
+
+" airline
+Plugin 'bling/vim-airline'
+
+" tagbar
+Plugin 'majutsushi/tagbar'
+
+" csv.vim
+Plugin 'chrisbra/csv.vim'
+
+" syntastic
+Plugin 'scrooloose/syntastic.git'
+
+" tmuxline.vim
+Plugin 'edkolev/tmuxline.vim'
+
+" promptline.vim
+Plugin 'edkolev/promptline.vim'
+call vundle#end() 			" end vundle whatnot
+
 " Enable filetype plugins
-filetype plugin on
-filetype indent on
+filetype plugin indent on
 
 " Automatically read files when changed outside vim
 set autoread
@@ -18,7 +48,7 @@ set wildignore=*.o,*~,*.pyc
 
 " Always show current position
 set ruler
-
+set nu
 " Height of the ocmmand bar
 set cmdheight=1
 
@@ -36,7 +66,7 @@ set hlsearch
 set incsearch
 
 " Don't redraw during macros
-set lazyredraw
+" set lazyredraw
 
 " regular expression magic
 set magic
@@ -57,7 +87,7 @@ colorscheme desert
 set background=dark
 
 " UTF-8 only duh
-set encoding=utf8
+set encoding=utf-8
 
 " Unix files
 set ffs=unix,dos,mac
@@ -68,9 +98,10 @@ set nowb
 set noswapfile
 
 " Text and tabs
+set softtabstop=0
+set expandtab
 set smarttab
-set shiftwidth=4
-set tabstop=4
+set shiftwidth=2
 
 set lbr
 set tw=500
@@ -124,6 +155,8 @@ set viminfo^=%
 
 " Always show status line
 set laststatus=2
+set showtabline=2
+set noshowmode
 
 " Format the status line
 set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ Line:\ %l
@@ -145,4 +178,10 @@ function! HasPaste()
 	return ''
 endfunction
 
+" vim-latex specific
+set grepprg=grep\ -nH\ $*
+let g:tex_flavor = "latex"
 
+" airline configuration
+let g:airline_powerline_fonts = 1
+let g:airline_theme = 'sol'
