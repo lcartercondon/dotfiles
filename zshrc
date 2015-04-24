@@ -29,10 +29,10 @@ bindkey -e
 
 autoload -U promptinit
 promptinit
-prompt adam2 8bit yellow white yellow
+# prompt adam2 8bit yellow white yellow
 
 # Persistent rehash
-setopt nohashdirs
+setopt nohashcmds
 
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
@@ -59,3 +59,4 @@ setopt pushdminus
 alias ls="ls --color=auto"
 export EDITOR="/usr/bin/vim"
 source /usr/share/doc/pkgfile/command-not-found.zsh
+source /home/liam/.config/shell_prompt.sh
