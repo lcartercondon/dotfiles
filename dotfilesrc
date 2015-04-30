@@ -4,4 +4,4 @@ ignore = [
 	'.git',
 	'.gitignore',
 	'*.swp']
-packages = ['config']
+packages = ['config','ncmpcpp']

@@ -1,0 +1,48 @@
+# Playlist
+song_columns_list_format = "(7f)[blue]{l} (4f)[white]{n|N} (25)[red]{a} (30)[green]{t|f} (6)[yellow]{b}"
+now_playing_prefix = "$b$5♬ "
+now_playing_suffix = "$/b"
+playlist_display_mode = "columns" (classic/columns)
+autocenter_mode = "yes"
+centered_cursor = "yes"
+playlist_disable_highlight_delay = "0"
+
+# Bars
+song_status_format = "$2%a $8• $3%t $8• $4%b $5"
+progressbar_look = "─╼ "
+titles_visibility = "no"
+
+# Browser
+browser_playlist_prefix = "$2plist »$9 "
+browser_display_mode = "columns" (classic/columns)
+
+# Colors
+discard_colors_if_item_is_selected = "yes"
+header_window_color = "cyan"
+volume_color = "cyan"
+state_line_color = "white"
+state_flags_color = "yellow"
+main_window_color = "white"
+color1 = "white"
+color2 = "green"
+main_window_highlight_color = "red"
+progressbar_color = "yellow"
+statusbar_color = "white"
+active_column_color = "red"
+visualizer_color = "blue"
+
+# Other
+song_window_title_format = "ncmpcpp {%d}"
+#"MPD: {%a > }{%t}{ [%b{ Disc %d}]}|{%f}"
+search_engine_display_mode = "columns" (classic/columns)
+follow_now_playing_lyrics = "yes"
+display_bitrate = "yes"
+##### colors definitions #####
+
+#
+
+colors_enabled = "yes"
+visualizer_in_stereo = "no"
+visualizer_sync_interval = "5"
+visualizer_type="spectrum"
+#
