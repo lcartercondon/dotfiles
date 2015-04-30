@@ -1,0 +1,29 @@
+Xft.dpi: 		166
+Xft.antialias: 	        true
+Xft.rgba: 		rgb
+Xft.hinting:    	true
+Xft.hintstyle:  	hintfull
+
+# URxvt settings
+#include ".urxvt_colors"
+URxvt*letterSpace: -1
+URxvt*buffered: true
+URxvt*font: xft:Droid Sans Mono for Powerline:size=6
+URxvt*boldFont: xft:Droid Sans Mono for Powerline:bold:size=6
+URxvt*italicFont: xft:Droid Sans Mono for Powerline:italic:size=6
+URxvt*boldItalicFont: xft:Droid Sans Mono for Powerline:bold:italic:size=6
+URxvt*iconFile: /usr/share/icons/Numix-Square/scalable/apps/qterminal.svg
+URxvt*scrollBar: false
+URxvt*scrollTtyOutput: false
+URxvt*scrollWithBuffer: true
+URxvt*scrollTtyKeypress: true
+URxvt*saveLines: 65357
+URxvt*cursorBlink: true
+URxvt*cursorUnderline: true
+URxvt*secondaryScreen: true
+URxvt*secondaryScroll: true
+URxvt*perl-ext-common: default,matcher
+URxvt*matcher.button: 1
+URxvt*url-launcher: qutebrowser
+URxvt*iso14755: false
+URxvt*iso14755_52: false
