@@ -33,7 +33,14 @@ Plugin 'edkolev/tmuxline.vim'
 
 " promptline.vim
 Plugin 'edkolev/promptline.vim'
+
+" base16
+Plugin 'chriskempson/base16-vim'
+
 call vundle#end() 			" end vundle whatnot
+
+" base16 shit
+let base16colorspace=256
 
 " Enable filetype plugins
 filetype plugin indent on
@@ -87,10 +94,9 @@ set t_vb=
 set tm=500
 
 " Coloring tweaks
-
 syntax enable
-colorscheme desert
 set background=dark
+colorscheme base16-ocean
 
 " UTF-8 only duh
 set encoding=utf-8
@@ -190,7 +196,7 @@ let g:tex_flavor = "latex"
 
 " airline configuration
 let g:airline_powerline_fonts = 1
-let g:airline_theme = 'ubaryd'
+let g:airline_theme = 'base16'
 
 " NerdTree commands
 autocmd StdinReadPre * let s:std_in=1
@@ -207,3 +213,4 @@ let g:promptline_preset = {
   \'x'          : [promptline#slices#vcs_branch(), promptline#slices#git_status(), '$(git rev-parse --short HEAD 2>/dev/null)'],
   \'y'          : [promptline#slices#battery({'threshold': 100})],
   \'z'          : [promptline#slices#host()]}
+
