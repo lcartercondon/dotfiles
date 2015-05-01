@@ -60,3 +60,4 @@ alias ls="ls --color=auto"
 export EDITOR="/usr/bin/vim"
 source /usr/share/doc/pkgfile/command-not-found.zsh
 source /home/liam/.config/shell_prompt.sh
+ZLE_RPOMPT_INDENT=0

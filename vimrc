@@ -13,6 +13,9 @@ Plugin 'tpope/vim-fugitive'
 " airline
 Plugin 'bling/vim-airline'
 
+" bufferline
+Plugin 'bling/vim-bufferline'
+
 " tagbar
 Plugin 'majutsushi/tagbar'
 
@@ -21,6 +24,9 @@ Plugin 'chrisbra/csv.vim'
 
 " syntastic
 Plugin 'scrooloose/syntastic.git'
+
+" nerdtree
+Plugin 'scrooloose/nerdtree.git'
 
 " tmuxline.vim
 Plugin 'edkolev/tmuxline.vim'
@@ -138,7 +144,7 @@ map <leader>te :tabedit <c-r>=expand("%:p:h")<cr>/
 " Switch CWD to the directory of the open buffer
 map <leader>cd :cd %:p:h<cr>:pwd<cr>
 
-" " Specify the behavior when switching between buffers 
+" " Specify the behavior when switching between buffers
 try
 	set switchbuf=useopen,usetab,newtab
 	set stal=2
@@ -166,7 +172,7 @@ set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ Line:\ 
 map 0 ^
 
 
-" Spell checking 
+" Spell checking
 " ,ss will toggle spell checking
 map <leader>ss :setlocal spell!<cr>
 
@@ -184,4 +190,20 @@ let g:tex_flavor = "latex"
 
 " airline configuration
 let g:airline_powerline_fonts = 1
-let g:airline_theme = 'sol'
+let g:airline_theme = 'ubaryd'
+
+" NerdTree commands
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+
+map <C-n> :NERDTreeToggle<CR>
+
+autocmd bufenter * if (winnr("$") == 1 && exists ("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+
+" promptline settings
+let g:promptline_preset = {
+  \'a'          : [promptline#slices#user(), promptline#slices#jobs()],
+  \'c'          : [promptline#slices#cwd()],
+  \'x'          : [promptline#slices#vcs_branch(), promptline#slices#git_status(), '$(git rev-parse --short HEAD 2>/dev/null)'],
+  \'y'          : [promptline#slices#battery({'threshold': 100})],
+  \'z'          : [promptline#slices#host()]}
