@@ -60,4 +60,6 @@ alias ls="ls --color=auto"
 export EDITOR="/usr/bin/vim"
 source /usr/share/doc/pkgfile/command-not-found.zsh
 source /home/liam/.config/shell_prompt.sh
+BASE16_SHELL="/usr/share/base16-shell/base16-ocean.dark.sh"
+[[ -s $BASE16_SHELL ]] && source $BASE16_SHELL
 ZLE_RPOMPT_INDENT=0
