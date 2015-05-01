@@ -4,8 +4,7 @@ Xft.rgba: 		rgb
 Xft.hinting:    	true
 Xft.hintstyle:  	hintfull
 
-# URxvt settings
-#include ".urxvt_colors"
+#include "urxvt_colors"
 URxvt*letterSpace: -1
 URxvt*buffered: true
 URxvt*font: xft:Droid Sans Mono for Powerline:size=6
