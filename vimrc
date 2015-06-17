@@ -37,6 +37,9 @@ Plugin 'edkolev/promptline.vim'
 " base16
 Plugin 'chriskempson/base16-vim'
 
+" you complete me
+" Plugin 'Valloric/YouCompleteMe.git'
+
 call vundle#end() 			" end vundle whatnot
 
 " base16 shit
@@ -171,7 +174,7 @@ set showtabline=2
 set noshowmode
 
 " Format the status line
-set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ Line:\ %l
+" set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ Line:\ %l
 
 " Mappings
 " remap VIM 0 to first non-blank
@@ -212,5 +215,5 @@ let g:promptline_preset = {
   \'c'          : [promptline#slices#cwd()],
   \'x'          : [promptline#slices#vcs_branch(), promptline#slices#git_status(), '$(git rev-parse --short HEAD 2>/dev/null)'],
   \'y'          : [promptline#slices#battery({'threshold': 100})],
-  \'z'          : [promptline#slices#host()]}
+  \'z'          : [promptline#slices#host({ 'only_if_ssh': 0 })]}
 
