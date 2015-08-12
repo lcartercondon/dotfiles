@@ -13,7 +13,7 @@ zstyle ':completion:*' menu select=1
 zstyle ':completion:*' select-prompt %SScrolling active: current selection at %p%s
 zstyle ':completion:*' substitute 1
 zstyle ':completion:*' verbose true
-zstyle :compinstall filename '/home/liam/.zshrc'
+zstyle :compinstall filename '/home/'$USER'/.zshrc'
 
 autoload -Uz compinit
 compinit
@@ -60,7 +60,7 @@ alias ls="ls --color=auto"
 export EDITOR="/usr/bin/vim"
 export TERM=xterm-256color
 source /usr/share/doc/pkgfile/command-not-found.zsh
-source /home/liam/.config/shell_prompt.sh
+source /home/$USER/.config/shell_prompt.sh
 BASE16_SHELL="/usr/share/base16-shell/base16-ocean.dark.sh"
 [[ -s $BASE16_SHELL ]] && source $BASE16_SHELL
 ZLE_RPOMPT_INDENT=0
