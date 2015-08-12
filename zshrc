@@ -58,6 +58,7 @@ setopt pushdminus
 
 alias ls="ls --color=auto"
 export EDITOR="/usr/bin/vim"
+export TERM=xterm-256color
 source /usr/share/doc/pkgfile/command-not-found.zsh
 source /home/$USER/.config/shell_prompt.sh
 BASE16_SHELL="/usr/share/base16-shell/base16-ocean.dark.sh"
