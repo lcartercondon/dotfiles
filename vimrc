@@ -219,4 +219,4 @@ let g:promptline_preset = {
   \'z'          : [promptline#slices#host({ 'only_if_ssh': 0 })]}
 
 " tmuxline settings
-let g:tmuxline_preset = 'tmux'
+let g:tmuxline_preset = 'powerline'
