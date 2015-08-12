@@ -200,6 +200,7 @@ let g:tex_flavor = "latex"
 " airline configuration
 let g:airline_powerline_fonts = 1
 let g:airline_theme = 'base16'
+let g:airline#extensions#tabline#enabled = 1
 
 " NerdTree commands
 autocmd StdinReadPre * let s:std_in=1
@@ -217,3 +218,5 @@ let g:promptline_preset = {
   \'y'          : [promptline#slices#battery({'threshold': 100})],
   \'z'          : [promptline#slices#host({ 'only_if_ssh': 0 })]}
 
+" tmuxline settings
+let g:tmuxline_preset = 'tmux'
