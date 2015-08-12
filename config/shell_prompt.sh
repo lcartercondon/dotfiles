@@ -227,7 +227,7 @@ function __promptline_cwd {
   local cwd="${PWD/#$HOME/$tilde}"
 
   # get first char of the path, i.e. tilde or slash
-  [[ -n ${ZSH_VERSION-} ]] && first_char=$cwd[1,1] || first_char=${cwd::1}
+  [[ -n ${ZSH_VERSION-} ]] && first_char=$cwd[1,1] || first_char=${cwd:1}
 
   # remove leading tilde
   cwd="${cwd#\~}"
